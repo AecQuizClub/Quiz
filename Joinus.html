@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join us</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/join.css">
+
+
+
+
+
+  
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="./index.html" class="nav-logo"><img src="./assets/img/output-onlinepngtools.png" alt="" srcset="" height="60px"></a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./Joinus.html" class="nav-link">Join Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="./gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="./about.html" class="nav-link">Our History</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="don">
+    <div class="dtc">
+    <p><iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSczZBYSU2Q3H55c4n-6NwZstNp7l6bRhgJ7-krpIB29nKeABA/viewform?embedded=true"
+        width="640" height="1707" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
+
+      </div>
+
+
+      
+  </div>
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>AEC QuizClub</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="https://www.aec.ac.in/">AEC</a></li>
+            <li><a href="https://astu.ac.in/">ASTU</a></li>
+            <li><a href="https://www.teqip.in/">TEQIP</a></li>
+            <li><a href="./about.html">History</a></li>
+           
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/quizclubAEC"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/QuizAec"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/quizclubaec/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+
+
+
+  
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+</body>
+
+</html>
