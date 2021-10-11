@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* Css Card  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -83,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 24px 0;
   background: rgba(103, 176, 209, 0.8);
   opacity: 0;
+  display: none;
 }
 
 
@@ -605,6 +610,67 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Cards
+--------------------------------------------------------------*/
+.card-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 5px;
+  color: black;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #ffffff;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
+
+.box h2 {
+  /* color: black; */
+  font-size: 10em;
+  z-index: 10;
+}
+
+
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
@@ -1016,8 +1082,12 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Team
+#   
 --------------------------------------------------------------*/
+
+#team{
+  margin-top: 85px;
+}
 .team .member {
   text-align: center;
   margin-bottom: 80px;
@@ -1237,6 +1307,7 @@ section {
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+  width: 98.7vw;
 }
 
 #footer .footer-top {
@@ -1393,7 +1464,7 @@ body {
 }
 
 footer {
-  width:100vw;
+  width:98.7vw;
 
   bottom:0px
 }
@@ -1483,7 +1554,42 @@ svg {
   to {transform: translateY(20%);}
 }
 
+#join {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  z-index: 99;
+  display: none;
+  /* cursor: pointer;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 998;
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s; */
+}
 
 
 
-
+.join_us {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 7px 12px;
+  background: #67b0d1;
+  /* border: solid #ff4848 4px; */
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}

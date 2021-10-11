@@ -63,13 +63,14 @@ a {
     margin-left: 5rem;
 }
 
-.nav-link{
+.nav-links{
     font-size: 1.6rem;
     font-weight: 400;
     color: #ffffff;
+    text-decoration: none;
 }
 
-.nav-link:hover{
+.nav-links:hover{
     color: #482ff7;
 }
 
@@ -143,6 +144,31 @@ a {
 }
 
 
+.section-title {
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 30px;
+    /* color: #2f4d5a; */
+    z-index: 2;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 122px;
+    height: 66px;
+    background: url(../img/section-title-bg.png) no-repeat;
+    z-index: -1;
+  }
 
 
 

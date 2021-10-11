@@ -6,32 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join us</title>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/join.css">
 
 
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
 
-  
+
 </head>
 
 <body>
+
+
+  <!-- Header class nav-link changed to nav-links since bootstrap css conflicting  -->
   <header class="header">
     <nav class="navbar">
-      <a href="./index.html" class="nav-logo"><img src="./assets/img/output-onlinepngtools.png" alt="" srcset="" height="60px"></a>
+      <a href="./index.html" class="nav-logo"><img src="./assets/img/output-onlinepngtools.png" alt="" srcset=""
+          height="60px"></a>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./index.html" class="nav-links">Home</a>
         </li>
         <li class="nav-item">
-          <a href="./Joinus.html" class="nav-link">Join Us</a>
+          <a href="./Joinus.html" class="nav-links">Join Us</a>
         </li>
         <li class="nav-item">
-          <a href="./gallery.html" class="nav-link">Gallery</a>
+          <a href="./gallery.html" class="nav-links">Gallery</a>
         </li>
         <li class="nav-item">
-          <a href="./about.html" class="nav-link">Our History</a>
+          <a href="./about.html" class="nav-links">Our History</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-links">President's Area</a>
         </li>
       </ul>
       <div class="hamburger">
@@ -42,16 +51,21 @@
     </nav>
   </header>
 
-  <div class="don">
-    <div class="dtc">
-    <p><iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSczZBYSU2Q3H55c4n-6NwZstNp7l6bRhgJ7-krpIB29nKeABA/viewform?embedded=true"
-        width="640" height="1707" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
+  <div class="container">
+    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+      <h2>Join Us </h2>
+    </div>
+
+    <div class="don">
+      <div class="dtc">
+        <p><iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSczZBYSU2Q3H55c4n-6NwZstNp7l6bRhgJ7-krpIB29nKeABA/viewform?embedded=true"
+            width="1000" height="1900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
 
       </div>
 
+    </div>
 
-      
   </div>
 
 
@@ -76,10 +90,10 @@
             <li><a href="https://astu.ac.in/">ASTU</a></li>
             <li><a href="https://www.teqip.in/">TEQIP</a></li>
             <li><a href="./about.html">History</a></li>
-           
+
           </ul>
         </div>
-        
+
         <div class="footer-col">
           <h4>follow us</h4>
           <div class="social-links">
@@ -91,11 +105,11 @@
         </div>
       </div>
     </div>
- </footer>
+  </footer>
 
 
 
-  
+
 
   <script>
     const hamburger = document.querySelector(".hamburger");
@@ -108,7 +122,7 @@
       navMenu.classList.toggle("active");
     }
 
-    const navLink = document.querySelectorAll(".nav-link");
+    const navLink = document.querySelectorAll(".nav-links");
 
     navLink.forEach(n => n.addEventListener("click", closeMenu));
 

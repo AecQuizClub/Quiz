@@ -81,18 +81,18 @@
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
-  let selectHeader = select('#header')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-      }
-    }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-  }
+  // let selectHeader = select('#header')
+  // if (selectHeader) {
+  //   const headerScrolled = () => {
+  //     if (window.scrollY > 100) {
+  //       selectHeader.classList.add('header-scrolled')
+  //     } else {
+  //       selectHeader.classList.remove('header-scrolled')
+  //     }
+  //   }
+  //   window.addEventListener('load', headerScrolled)
+  //   onscroll(document, headerScrolled)
+  // }
 
   /**
    * Back to top button
@@ -254,3 +254,49 @@
   });
 
 })()
+
+// Debounce function
+function debounce(func, wait = 10, immediate = true) {
+  var timeout;
+  return function () {
+    var context = this, args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+// Navbar Hidden  
+
+    const hero = document.getElementById('hero');
+    const nav = document.getElementById('header');
+
+    function HandleScroll(){
+        const heroLength = hero.offsetHeight;
+        let reqScrollHeight= window.scrollY + window.innerHeight;
+        let isVisible = reqScrollHeight > 1.8*heroLength;
+        isVisible ? nav.style.setProperty('display','block') : nav.style.setProperty('display','none')
+        // isVisible ? nav.classList.add('header-scrolled') : nav.classList.remove('header-scrolled')
+    }
+
+    window.addEventListener('scroll', debounce(HandleScroll));
+
+
+// Join Us Button
+
+    const join_button= document.getElementById('join');
+
+    function showButton(){
+      const heroLength = hero.offsetHeight;
+      let reqScrollHeight= window.scrollY + window.innerHeight;
+      let isVisible = reqScrollHeight > 3*heroLength;
+      isVisible ? join_button.style.setProperty('display','block') : join_button.style.setProperty('display','none');
+      // isVisible ? visibility = true : visibility= false;
+  }
+  window.addEventListener('scroll', debounce(showButton));
+  
