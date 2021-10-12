@@ -79,6 +79,39 @@ a {
     font-weight: 500;
     color: #482ff7;
 }
+
+.heading::before{
+    background: url(../img/prague-980732_1920.jpg) no-repeat center center/cover;
+    background-size: 100%;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40vh;
+    z-index: -1;
+    opacity: 0.6;
+}
+.heading h2{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    /* color: rgb(17, 17, 17); */
+    font-weight: bold;
+}
+
+.page{
+    margin-top: 50px;
+}
+.pp-section {
+    padding-top: 4rem;
+}
+
+.title{
+    width: 83vw;
+}
+
+
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
